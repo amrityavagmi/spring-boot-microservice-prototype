@@ -1,0 +1,31 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#squarebutton").on("click", () => {
+            let number = $("#number").val();
+
+        $.ajax({
+            url: "/math/square/" + number,
+            method: "POST",
+            error(xhr) {
+                $("#squareresult").text(xhr.responseJSON.message);
+            },
+            success(response) {
+                $("#squareresult").text(response);
+            }
+        });
+
+        });
+
+        });
+    </script>
+</head>
+<body>
+Number<input type="text" id="number">
+<br/>
+<button id="squarebutton">Get Square</button>
+<h1 id="squareresult"></h1>
+</body>
+</html>

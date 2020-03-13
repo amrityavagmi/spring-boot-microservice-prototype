@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: square-server
+
+  cloud:
+    config:
+      uri: http://localhost:6000

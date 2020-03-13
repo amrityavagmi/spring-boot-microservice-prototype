@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: misc
+  cloud:
+    config:
+      uri: http://localhost:6000

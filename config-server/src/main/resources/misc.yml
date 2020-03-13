@@ -1,0 +1,4 @@
+welcome:
+  default message
+server:
+  port: 8084
